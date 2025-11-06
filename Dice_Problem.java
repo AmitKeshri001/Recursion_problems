@@ -20,7 +20,7 @@ public class Dice_Problem
 
         for(int i=1; i<=6 && i<=target;i++)
         {
-            dice(p+i,target-1);
+            dice(p+i,target-i);
         }
     }
 
@@ -40,7 +40,7 @@ public class Dice_Problem
 
         for(int i=1;i<=6 && i<=target ; i++)
         {
-            ans.addAll(dicelist(p+i , target-1));
+            ans.addAll(dicelist(p+i , target-i));
         }
         return ans;
 
@@ -59,7 +59,7 @@ public class Dice_Problem
 
         for(int i=1;i<=6 && i<=target; i++)
         {
-            count = count + diceCount(p+i , target-1);
+            count = count + diceCount(p+i , target-i);
         }
         return count;
     }
